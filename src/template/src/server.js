@@ -8,7 +8,7 @@ const cors          = require("cors");
 const app           = express();
 
 // @TODO `require("./commons/accessPoints")` should be a reference to xdome-extension-rest package
-let accessPoints    = new (require("./commons/accessPoints"))(express, xdome.accessPoints),
+let accessPoints    = new (require("./plugins/accessPoints"))(express, xdome.accessPoints),
     port            = (process.env.PORT * 1) || "3000";
 
 app.disable("x-powered-by");
