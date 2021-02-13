@@ -18,6 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 accessPoints.setRoutes();
-app.use(accessPoints.router);
+app.use(xdome.basePath, accessPoints.router);
 
-app.listen(port, "0.0.0.0", function() {});
+app.listen(port, "0.0.0.0", function() {
+    console.log("Tu aplicación está ejecutándose en http://localhost:" + port)
+});
