@@ -21,5 +21,6 @@ accessPoints.setRoutes();
 app.use(xdome.basePath, accessPoints.router);
 
 app.listen(port, "0.0.0.0", function() {
+    // eslint-disable-next-line no-console
     console.log("Tu aplicación está ejecutándose en http://localhost:" + port)
 });
