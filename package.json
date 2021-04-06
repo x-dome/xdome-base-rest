@@ -1,6 +1,6 @@
 {
   "name": "@x-dome/xdome-base-rest",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "license": "MIT",
   "description": "xdome-base-rest",
   "main": "src/index.js",
@@ -13,7 +13,7 @@
     "/src/*"
   ],
   "dependencies": {
-    "@x-dome/xdome-extension-rest": "0.1.3"
+    "@x-dome/xdome-extension-rest": "0.1.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
