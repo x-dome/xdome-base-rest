@@ -7,7 +7,8 @@
   "scripts": {
     "test": "mocha --recursive",
     "lint": "eslint .",
-    "coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm run test"
+    "coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm run test",
+    "prepare": "husky install"
   },
   "files": [
     "/src/*"
@@ -16,20 +17,14 @@
     "@x-dome/xdome-extension-rest": "0.1.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "chai": "^4.2.0",
     "eslint": "^7.6.0",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
     "mocha": "^8.1.0",
     "nyc": "^15.1.0",
     "rewire": "^5.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "repository": {
     "type": "git",
