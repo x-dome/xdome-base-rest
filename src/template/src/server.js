@@ -3,7 +3,6 @@
 const xdome         = require("./../xdome.json");
 const express       = require("express");
 const compression   = require("compression");
-const bodyParser    = require("body-parser");
 const cors          = require("cors");
 const app           = express();
 
@@ -14,8 +13,8 @@ let accessPoints    = new (require("./plugins/accessPoints"))(express, xdome.acc
 app.disable("x-powered-by");
 app.use(cors())
 app.use(compression());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 accessPoints.setRoutes();
 app.use(xdome.basePath, accessPoints.router);
